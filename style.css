@@ -10,24 +10,58 @@
 Основные стили
 ---------------*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 a {
-  text-decoration: none;
   color: #666564;
+  text-decoration: none;
 }
-header {
-  background: url(img/backgroundHeader.jpg);
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.top {
+  background: #575757 url(img/backgroundHeader.jpg);
+  overflow: hidden;
   padding: 58px 200px 25px;
+}
+.header_grid {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: end;
 }
 .logo {
   background: url(img/Logo_place_here.png);
   display: block;
-  width: 294px;
   height: 84px;
+  width: 294px;
 }
 .logo:hover {
   filter: drop-shadow(2px 2px 2px #cccccc);
+}
+.nav_right {
+  grid-column: 3/4;
+}
+.menu__link {
+  color: #ffffff;
+  font-family: "Bebas Neue Bold";
+  font-size: 24px;
+  font-weight: 400;
+  display: block;
+  line-height: 28.89px;
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+}
+.menu__link:hover {
+  color: #d25b38;
+}
+.menu__item {
+  list-style-type: none;
+}
+.menu__item_inline {
+  display: inline-block;
 }
