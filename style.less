@@ -3,7 +3,6 @@
     src: url(BebasNeue.ttf);
 }
 
-
 /* --------------
 Переменные и микшены
 ---------------*/
@@ -23,4 +22,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: @pText;
+}
+
+header {
+    background: url(img/backgroundHeader.jpg);
+    padding: 58px 200px 25px;
+}
+
+.logo {
+    background: url(img/Logo_place_here.png);
+    display: block;
+    width: 294px;
+    height: 84px;
+    &:hover {
+        filter: drop-shadow(2px 2px 2px #ccc);
+    }
 }
