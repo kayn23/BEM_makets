@@ -6,7 +6,7 @@
 Переменные и микшены
 ---------------*/
 /* --------------
-Основные стили
+cСброс
 ---------------*/
 * {
   box-sizing: border-box;
@@ -17,34 +17,20 @@ a {
   color: #666564;
   text-decoration: none;
 }
-.container {
-  max-width: 1600px;
-  width: 100%;
-  margin: 0 auto;
+.about {
+  background: #ffffff url(img/aboutCenter.jpg) no-repeat center center;
+  background-size: contain;
 }
-.top {
-  background: #575757 url(img/backgroundHeader.jpg);
-  overflow: hidden;
-  padding: 58px 0 25px;
-  padding: 58px 200px 25px;
-}
-.header_grid {
+.about_grid {
+  padding: 0 200px 0;
   display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  align-items: end;
-  padding-bottom: 25px;
+  grid-template-columns: 358px 2fr;
 }
-.logo {
-  background: url(img/Logo_place_here.png);
-  display: block;
-  height: 84px;
-  width: 294px;
+.about__item_left {
+  padding: 98px 15px;
 }
-.logo:hover {
-  filter: drop-shadow(2px 2px 2px #cccccc);
-}
-.nav_right {
-  grid-column: 3/4;
+.about__item_right {
+  padding: 98px 15px 0 65px;
 }
 .menu__link {
   color: #ffffff;
@@ -97,6 +83,16 @@ a {
 .genCaption_positionAboutUs {
   color: #454443;
 }
+.genText {
+  color: #666564;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.genText_positionAboutUs {
+  grid-area: aboutUsLeft;
+}
 .button {
   color: #ffffff;
   font-family: "Bebas Neue Bold";
@@ -122,31 +118,6 @@ a {
 .button_styleHeader {
   padding: 10px 45px;
   margin-left: 20px;
-}
-.about {
-  background: #ffffff url(img/aboutCenter.jpg) no-repeat center center;
-  background-size: contain;
-}
-.about_grid {
-  padding: 0 200px 0;
-  display: grid;
-  grid-template-columns: 358px 2fr;
-}
-.about__item_left {
-  padding: 98px 15px;
-}
-.about__item_right {
-  padding: 98px 15px 0 65px;
-}
-.genText {
-  color: #666564;
-  font-family: "Open Sans";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-.genText_positionAboutUs {
-  grid-area: aboutUsLeft;
 }
 .listAbout__caption {
   border-bottom: 1px solid #ffffff;
@@ -185,16 +156,32 @@ a {
   grid-template-areas: "aboutUsRight marker aboutUsLeft";
   grid-column-gap: 20px;
 }
-@media (max-width: 1330px) {
-  .top,
-  .about {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .listAbout__marker_positionAboutUs {
-    display: none;
-  }
-  .listAbout_positionAboutUs {
-    grid-template-areas: "aboutUsRight aboutUsLeft aboutUsLeft";
-  }
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+.top {
+  background: #575757 url(img/backgroundHeader.jpg);
+  overflow: hidden;
+  padding: 58px 0 25px;
+  padding: 58px 200px 25px;
+}
+.header_grid {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: end;
+  padding-bottom: 25px;
+}
+.logo {
+  background: url(img/Logo_place_here.png);
+  display: block;
+  height: 84px;
+  width: 294px;
+}
+.logo:hover {
+  filter: drop-shadow(2px 2px 2px #cccccc);
+}
+.nav_right {
+  grid-column: 3/4;
 }

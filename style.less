@@ -1,37 +1,12 @@
-@font-face {
-    font-family: 'Bebas Neue Bold';
-    src: url(BebasNeue.ttf);
-}
+@import url(BEM/_varibles);
 
-/* --------------
-Переменные и микшены
----------------*/
-@accentText: #e3633e;
-@generalText: #454443;
-@fontBadas: "Bebas Neue Bold";
-@fontSans: "Open Sans";
-@pText: #666564;
-@liteBackground: #ffffff;
-@shadBackground: #f4f2f2;
-
-.padding(@t: 0, @r: 0, @b: 0) {
-    padding: @t @r @b;
-}
-
-/* --------------
-Основные стили
----------------*/
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    color: @pText;
-    text-decoration: none;
-}
+@import url(BEM/about);
+@import url(BEM/menu);
+@import url(BEM/newsHead);
+@import url(BEM/generalCaption);
+@import url(BEM/generalText);
+@import url(BEM/button);
+@import url(BEM/listAbout);
 
 .container {
     max-width: 1600px;
@@ -69,212 +44,25 @@ a {
         //grid-row: 1/-1;
 }
 
-.menu {
-    &__link {
-        color: @liteBackground;
-        font-family: @fontBadas;
-        font-size: 24px;
-        font-weight: 400;
-        display: block;
-        line-height: 28.89px;
-        height: 100%;
-        padding: 10px;
-        width: 100%;
 
-        &:hover {
-            color: @accentText;
-        }
-    }
-
-    &__item {
-        list-style-type: none;
-
-        &_inline {
-            display: inline-block;
-        }
-    }
-}
-
-.newsHead {
-    &__info {
-        color: @liteBackground;
-        font-family: @fontSans;
-        font-size: 25px;
-        font-style: italic;
-
-        &_positionHeader {
-            margin-bottom: 70px;
-        }
-    }
-
-    &_positionHeader {
-        width: 720px;
-        margin-top: 140px;
-        margin-bottom: 160px;
-    }
-}
-
-.genCaption {
-
-    font-family: @fontBadas;
-    font-size: 95px;
-    font-weight: 400;
-    line-height: 88.33px;
-    text-transform: uppercase;
-
-    &__accent {
-        color: @accentText;
-    }
-
-    &_positionHeader {
-        margin-bottom: 50px;
-        color: @liteBackground;
-    }
-
-    &_positionAboutUs {
-        color: @generalText;
-    }
-}
-
-.button {
-    color: @liteBackground;
-    font-family: @fontBadas;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    display: inline-block;
-
-    &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-    &:active {
-        transform: scale(0.98);
-    }
-
-    &_background {
-        &_orange {
-            background-color: @accentText;
-            border: 5px solid @accentText;
-        }
-
-        &_lite {
-            border: 5px solid @liteBackground;
-        }
-    }
-
-    &_styleHeader {
-        padding: 10px 45px;
-        margin-left: 20px;
-    }
-}
-
-.about {
-    background: @liteBackground url(img/aboutCenter.jpg) no-repeat center center;
-    background-size: contain;
-
-    //.padding(@r:200px);
-    &_grid {
-        .padding(@r: 200px);
-        display: grid;
-        grid-template-columns: 358px 2fr;
-    }
-
-    &__item {
-        &_left {
-            padding: 98px 15px;
-        }
-
-        &_right {
-
-            padding: 98px 15px 0 65px;
-        }
-    }
-}
-
-.genText {
-    color: @pText;
-    font-family: @fontSans;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-
-    &_positionAboutUs {
-        grid-area: aboutUsLeft
-    }
-}
-
-.listAbout {
-    &__caption {
-        border-bottom: 1px solid @liteBackground;
-    }
-
-    &__captionItem {
-        color: @liteBackground;
-        font-family: @fontBadas;
-        font-weight: 400;
-        line-height: 36.59px;
-        text-transform: uppercase;
-
-        &_fontSize {
-            &_b {
-                font-size: 40px;
-            }
-
-            &_s {
-                font-size: 25px;
-            }
-        }
-
-        &_positionAboutUs {
-            text-align: right;
-            grid-area: aboutUsRight;
-        }
-    }
-
-    &__marker {
-        font-size: 30px;
-        transform: scaleX(-1);
-        padding: 15px;
-        border-radius: 50%;
-        border: 10px solid fadeout(@accentText, 30);
-
-        &_positionAboutUs {
-            align-self: center;
-            grid-area: marker;
-        }
-    }
-
-    &_positionAboutUs {
-        display: grid;
-        grid-template-columns: 32% max-content 1fr;
-        grid-template-areas: "aboutUsRight marker aboutUsLeft";
-        grid-column-gap: 20px;
-        //justify-items: center;
-        //align-items: center;
-    }
-}
-
-
-@media (max-width:1330px) {
-
-    .top,
-    .about {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .listAbout {
-        &__marker {
-
-        &_positionAboutUs {
-            display: none;
-        }
-    }
-
-        &_positionAboutUs {
-            grid-template-areas: "aboutUsRight aboutUsLeft aboutUsLeft"
-        }
-    }
-}
+//@media (max-width:1330px) {
+//
+//    .top,
+//    .about {
+//        padding-left: 50px;
+//        padding-right: 50px;
+//    }
+//
+//    .listAbout {
+//        &__marker {
+//
+//        &_positionAboutUs {
+//            display: none;
+//        }
+//    }
+//
+//        &_positionAboutUs {
+//            grid-template-areas: "aboutUsRight aboutUsLeft aboutUsLeft"
+//        }
+//    }
+//}

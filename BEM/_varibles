@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    src: url(BebasNeue.ttf);
+}
+/* --------------
+Переменные и микшены
+---------------*/
+@accentText: #e3633e;
+@generalText: #454443;
+@fontBadas: "Bebas Neue Bold";
+@fontSans: "Open Sans";
+@pText: #666564;
+@liteBackground: #ffffff;
+@shadBackground: #f4f2f2;
+
+.padding(@t: 0, @r: 0, @b: 0) {
+    padding: @t @r @b;
+}
+
+/* --------------
+cСброс
+---------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: @pText;
+    text-decoration: none;
+}

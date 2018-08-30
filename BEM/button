@@ -1,0 +1,33 @@
+.button {
+    color: @liteBackground;
+    font-family: @fontBadas;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &_background {
+        &_orange {
+            background-color: @accentText;
+            border: 5px solid @accentText;
+        }
+
+        &_lite {
+            border: 5px solid @liteBackground;
+        }
+    }
+
+    &_styleHeader {
+        padding: 10px 45px;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,50 @@
+.listAbout {
+    &__caption {
+        border-bottom: 1px solid @liteBackground;
+    }
+
+    &__captionItem {
+        color: @liteBackground;
+        font-family: @fontBadas;
+        font-weight: 400;
+        line-height: 36.59px;
+        text-transform: uppercase;
+
+        &_fontSize {
+            &_b {
+                font-size: 40px;
+            }
+
+            &_s {
+                font-size: 25px;
+            }
+        }
+
+        &_positionAboutUs {
+            text-align: right;
+            grid-area: aboutUsRight;
+        }
+    }
+
+    &__marker {
+        font-size: 30px;
+        transform: scaleX(-1);
+        padding: 15px;
+        border-radius: 50%;
+        border: 10px solid fadeout(@accentText, 30);
+
+        &_positionAboutUs {
+            align-self: center;
+            grid-area: marker;
+        }
+    }
+
+    &_positionAboutUs {
+        display: grid;
+        grid-template-columns: 32% max-content 1fr;
+        grid-template-areas: "aboutUsRight marker aboutUsLeft";
+        grid-column-gap: 20px;
+        //justify-items: center;
+        //align-items: center;
+    }
+}

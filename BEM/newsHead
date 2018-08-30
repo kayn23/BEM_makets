@@ -1,0 +1,18 @@
+.newsHead {
+    &__info {
+        color: @liteBackground;
+        font-family: @fontSans;
+        font-size: 25px;
+        font-style: italic;
+
+        &_positionHeader {
+            margin-bottom: 70px;
+        }
+    }
+
+    &_positionHeader {
+        width: 720px;
+        margin-top: 140px;
+        margin-bottom: 160px;
+    }
+}

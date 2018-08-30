@@ -1,0 +1,22 @@
+.about {
+    background: @liteBackground url(img/aboutCenter.jpg) no-repeat center center;
+    background-size: contain;
+
+    //.padding(@r:200px);
+    &_grid {
+        .padding(@r: 200px);
+        display: grid;
+        grid-template-columns: 358px 2fr;
+    }
+
+    &__item {
+        &_left {
+            padding: 98px 15px;
+        }
+
+        &_right {
+
+            padding: 98px 15px 0 65px;
+        }
+    }
+}
