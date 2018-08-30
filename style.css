@@ -25,6 +25,7 @@ a {
 .top {
   background: #575757 url(img/backgroundHeader.jpg);
   overflow: hidden;
+  padding: 58px 0 25px;
   padding: 58px 200px 25px;
 }
 .header_grid {
@@ -77,10 +78,9 @@ a {
 .newsHead_positionHeader {
   width: 720px;
   margin-top: 140px;
-  margin-bottom: 170px;
+  margin-bottom: 160px;
 }
 .genCaption {
-  color: #ffffff;
   font-family: "Bebas Neue Bold";
   font-size: 95px;
   font-weight: 400;
@@ -92,6 +92,10 @@ a {
 }
 .genCaption_positionHeader {
   margin-bottom: 50px;
+  color: #ffffff;
+}
+.genCaption_positionAboutUs {
+  color: #454443;
 }
 .button {
   color: #ffffff;
@@ -118,4 +122,79 @@ a {
 .button_styleHeader {
   padding: 10px 45px;
   margin-left: 20px;
+}
+.about {
+  background: #ffffff url(img/aboutCenter.jpg) no-repeat center center;
+  background-size: contain;
+}
+.about_grid {
+  padding: 0 200px 0;
+  display: grid;
+  grid-template-columns: 358px 2fr;
+}
+.about__item_left {
+  padding: 98px 15px;
+}
+.about__item_right {
+  padding: 98px 15px 0 65px;
+}
+.genText {
+  color: #666564;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.genText_positionAboutUs {
+  grid-area: aboutUsLeft;
+}
+.listAbout__caption {
+  border-bottom: 1px solid #ffffff;
+}
+.listAbout__captionItem {
+  color: #ffffff;
+  font-family: "Bebas Neue Bold";
+  font-weight: 400;
+  line-height: 36.59px;
+  text-transform: uppercase;
+}
+.listAbout__captionItem_fontSize_b {
+  font-size: 40px;
+}
+.listAbout__captionItem_fontSize_s {
+  font-size: 25px;
+}
+.listAbout__captionItem_positionAboutUs {
+  text-align: right;
+  grid-area: aboutUsRight;
+}
+.listAbout__marker {
+  font-size: 30px;
+  transform: scaleX(-1);
+  padding: 15px;
+  border-radius: 50%;
+  border: 10px solid rgba(227, 99, 62, 0.7);
+}
+.listAbout__marker_positionAboutUs {
+  align-self: center;
+  grid-area: marker;
+}
+.listAbout_positionAboutUs {
+  display: grid;
+  grid-template-columns: 32% max-content 1fr;
+  grid-template-areas: "aboutUsRight marker aboutUsLeft";
+  grid-column-gap: 20px;
+}
+@media (max-width: 1330px) {
+  .top,
+  .about {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .listAbout__marker_positionAboutUs {
+    display: none;
+  }
+  .listAbout_positionAboutUs {
+    grid-template-areas: "aboutUsRight aboutUsLeft aboutUsLeft";
+  }
 }

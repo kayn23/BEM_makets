@@ -14,6 +14,10 @@
 @liteBackground: #ffffff;
 @shadBackground: #f4f2f2;
 
+.padding(@t: 0, @r: 0, @b: 0) {
+    padding: @t @r @b;
+}
+
 /* --------------
 Основные стили
 ---------------*/
@@ -38,7 +42,8 @@ a {
 .top {
     background: #575757 url(img/backgroundHeader.jpg);
     overflow: hidden;
-    padding: 58px 200px 25px;
+    padding: 58px 0 25px;
+    .padding(58px, 200px, 25px);
 }
 
 .header_grid {
@@ -105,12 +110,12 @@ a {
     &_positionHeader {
         width: 720px;
         margin-top: 140px;
-        margin-bottom: 170px;
+        margin-bottom: 160px;
     }
 }
 
 .genCaption {
-    color: @liteBackground;
+
     font-family: @fontBadas;
     font-size: 95px;
     font-weight: 400;
@@ -123,6 +128,11 @@ a {
 
     &_positionHeader {
         margin-bottom: 50px;
+        color: @liteBackground;
+    }
+
+    &_positionAboutUs {
+        color: @generalText;
     }
 }
 
@@ -138,7 +148,8 @@ a {
         cursor: pointer;
         text-decoration: underline;
     }
-    &:active{
+
+    &:active {
         transform: scale(0.98);
     }
 
@@ -156,5 +167,114 @@ a {
     &_styleHeader {
         padding: 10px 45px;
         margin-left: 20px;
+    }
+}
+
+.about {
+    background: @liteBackground url(img/aboutCenter.jpg) no-repeat center center;
+    background-size: contain;
+
+    //.padding(@r:200px);
+    &_grid {
+        .padding(@r: 200px);
+        display: grid;
+        grid-template-columns: 358px 2fr;
+    }
+
+    &__item {
+        &_left {
+            padding: 98px 15px;
+        }
+
+        &_right {
+
+            padding: 98px 15px 0 65px;
+        }
+    }
+}
+
+.genText {
+    color: @pText;
+    font-family: @fontSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &_positionAboutUs {
+        grid-area: aboutUsLeft
+    }
+}
+
+.listAbout {
+    &__caption {
+        border-bottom: 1px solid @liteBackground;
+    }
+
+    &__captionItem {
+        color: @liteBackground;
+        font-family: @fontBadas;
+        font-weight: 400;
+        line-height: 36.59px;
+        text-transform: uppercase;
+
+        &_fontSize {
+            &_b {
+                font-size: 40px;
+            }
+
+            &_s {
+                font-size: 25px;
+            }
+        }
+
+        &_positionAboutUs {
+            text-align: right;
+            grid-area: aboutUsRight;
+        }
+    }
+
+    &__marker {
+        font-size: 30px;
+        transform: scaleX(-1);
+        padding: 15px;
+        border-radius: 50%;
+        border: 10px solid fadeout(@accentText, 30);
+
+        &_positionAboutUs {
+            align-self: center;
+            grid-area: marker;
+        }
+    }
+
+    &_positionAboutUs {
+        display: grid;
+        grid-template-columns: 32% max-content 1fr;
+        grid-template-areas: "aboutUsRight marker aboutUsLeft";
+        grid-column-gap: 20px;
+        //justify-items: center;
+        //align-items: center;
+    }
+}
+
+
+@media (max-width:1330px) {
+
+    .top,
+    .about {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .listAbout {
+        &__marker {
+
+        &_positionAboutUs {
+            display: none;
+        }
+    }
+
+        &_positionAboutUs {
+            grid-template-areas: "aboutUsRight aboutUsLeft aboutUsLeft"
+        }
     }
 }
