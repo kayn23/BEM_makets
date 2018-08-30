@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url(BebasNeue.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
