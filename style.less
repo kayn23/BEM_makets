@@ -6,7 +6,7 @@
 /* --------------
 Переменные и микшены
 ---------------*/
-@accentText: #d25b38;
+@accentText: #e3633e;
 @generalText: #454443;
 @fontBadas: "Bebas Neue Bold";
 @fontSans: "Open Sans";
@@ -60,7 +60,7 @@ a {
 
 .nav_right {
     grid-column: ~'3/4'
-    //grid-row: 1/-1;
+        //grid-row: 1/-1;
 }
 
 .menu {
@@ -86,5 +86,51 @@ a {
         &_inline {
             display: inline-block;
         }
+    }
+}
+
+.newsHead {
+    &__info {
+        color: @liteBackground;
+        font-family: @fontSans;
+        font-size: 25px;
+        font-style: italic;
+    }
+}
+
+.genCaption {
+    color: @liteBackground;
+    font-family: @fontBadas;
+    font-size: 95px;
+    font-weight: 400;
+    line-height: 88.33px;
+    text-transform: uppercase;
+
+    &_accent {
+        color: @accentText;
+    }
+}
+
+.button {
+    color: @liteBackground;
+    font-family: @fontBadas;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+
+    &_background {
+        &_orange {
+            background-color: @accentText;
+            border: 5px solid @accentText;
+        }
+
+        &_lite {
+            border: 5px solid @liteBackground;
+        }
+    }
+
+    &_sizeHead {
+        padding: 10px 45px;
     }
 }
